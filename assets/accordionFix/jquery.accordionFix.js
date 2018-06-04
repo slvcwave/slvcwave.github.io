@@ -1,0 +1,2 @@
+
+$(".panel-heading").on("click",function(a){a.stopPropagation();if("tab"==$(this).attr("role")){a=$(this).parent();var b=a.parent();$(this).hasClass("active")?($(this).removeClass("active"),a.removeClass("active"),$(this).siblings(".panel-collapse").eq(0).stop().slideUp(400)):(b.find(".panel-collapse").each(function(){$(this).parent().removeClass("active");$(this).siblings(".panel-heading").eq(0).removeClass("active");$(this).stop().slideUp(400)}),$(this).addClass("active"),a.addClass("active"),$(this).siblings(".panel-collapse").eq(0).stop().slideDown(400))}});
